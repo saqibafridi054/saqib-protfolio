@@ -3,6 +3,7 @@
 import { ExternalLink, Link2, AtSign, Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { NAV_LINKS, SOCIAL_LINKS, CONTACT_INFO } from "@/app/lib/data";
+import Image from "next/image";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -49,12 +50,52 @@ export default function Footer() {
         <div className="footer-links" style={{ display: "grid", gridTemplateColumns: "4fr 3fr 2fr 3fr", gap: 40, marginBottom: 64 }}>
           {/* Brand */}
           <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-            <a href="#home" onClick={e => { e.preventDefault(); go("#home"); }} style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
-              <div style={{ width: 36, height: 36, borderRadius: 10, background: "#02569b", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ color: "#fff", fontWeight: 700, fontSize: 13, fontFamily: "monospace" }}>SA</span>
-              </div>
-              <span style={{ color: "#e5e2e3", fontWeight: 700, fontSize: 16 }}>Saqib Afridi</span>
-            </a>
+            <a
+  href="#home"
+  onClick={(e) => {
+    e.preventDefault();
+    go("#home");
+  }}
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: 10,
+    textDecoration: "none",
+  }}
+>
+  <div
+    style={{
+      width: 36,
+      height: 36,
+      borderRadius: "50%",
+      overflow: "hidden",
+      border: "2px solid #02569b",
+      flexShrink: 0,
+    }}
+  >
+    <Image
+      src="/image/saqib.jpeg" // apni image ka path
+      alt="Saqib Afridi"
+      width={36}
+      height={36}
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+      }}
+    />
+  </div>
+
+  <span
+    style={{
+      color: "#e5e2e3",
+      fontWeight: 700,
+      fontSize: 16,
+    }}
+  >
+    Saqib Afridi
+  </span>
+</a>
             <p style={{ fontSize: 14, color: "#A1A1AA", lineHeight: 1.7, margin: 0 }}>
               Senior Flutter Developer passionate about crafting beautiful, high-performance mobile experiences for iOS and Android.
             </p>
