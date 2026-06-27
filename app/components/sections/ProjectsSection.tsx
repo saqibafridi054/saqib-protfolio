@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Code2 } from "lucide-react";
 import { SectionTitle, SkillTag } from "@/app/components/ui";
 import { PROJECTS } from "@/app/lib/data";
+import Image from "next/image";
 
 const gradients = [
   "linear-gradient(135deg, rgba(2,86,155,0.4) 0%, rgba(0,180,225,0.2) 100%)",
@@ -57,21 +58,51 @@ export default function ProjectsSection() {
                 className="glass-card"
                 style={{ borderRadius: 20, padding: 24, display: "flex", flexDirection: "column", height: "100%" }}
               >
-                {/* Visual */}
-                <div style={{
-                  borderRadius: 14, marginBottom: 20,
-                  aspectRatio: "16/9", background: gradients[i % gradients.length],
-                  display: "flex", alignItems: "center", justifyContent: "center",
-                  position: "relative", overflow: "hidden",
-                }}>
-                  <Code2 size={36} style={{ color: "rgba(164,201,255,0.2)", position: "absolute" }} />
-                  <div className="glass-card" style={{
-                    position: "relative", zIndex: 1, padding: "8px 16px", borderRadius: 10,
-                    fontSize: 12, fontFamily: "monospace", color: "#a4c9ff",
-                  }}>
-                    {p.tags[0]}
-                  </div>
-                </div>
+               {/* Visual */}
+<div
+  style={{
+    borderRadius: 14,
+    marginBottom: 20,
+    aspectRatio: "16/9",
+    position: "relative",
+    overflow: "hidden",
+    background: "#111827",
+  }}
+>
+  <Image
+    src={p.image}
+    alt={p.imageAlt}
+    fill
+    style={{
+      objectFit: "cover",
+    }}
+  />
+
+  <div
+    style={{
+      position: "absolute",
+      inset: 0,
+      background: "linear-gradient(to top, rgba(0,0,0,0.45), transparent)",
+    }}
+  />
+
+  <div
+    className="glass-card"
+    style={{
+      position: "absolute",
+      top: 12,
+      left: 12,
+      zIndex: 2,
+      padding: "8px 16px",
+      borderRadius: 10,
+      fontSize: 12,
+      fontFamily: "monospace",
+      color: "#a4c9ff",
+    }}
+  >
+    {p.tags[0]}
+  </div>
+</div>
 
                 {/* Content */}
                 <div style={{ flex: 1 }}>

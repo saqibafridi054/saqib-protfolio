@@ -72,7 +72,7 @@ export const PROJECTS = [
     description:
       "Enterprise-grade healthcare platform with doctor scheduling, patient records, appointment booking, and real-time analytics dashboard.",
     tags: ["Flutter", "Firebase", "Bloc", "REST API"],
-    image: "/projects/hospital.jpg",
+    image: "/image/HospitalManagementApp.png",
     imageAlt: "Hospital Management App screenshot",
     github: "#",
     demo: "#",
@@ -83,7 +83,7 @@ export const PROJECTS = [
     description:
       "Feature-rich shopping experience with real-time inventory, Stripe payments, personalized recommendations, and order tracking.",
     tags: ["Flutter", "Dart", "Stripe", "Firestore"],
-    image: "/projects/ecommerce.jpg",
+    image: "/image/E-CommerceApp.png",
     imageAlt: "E-Commerce App screenshot",
     github: "#",
     demo: "#",
@@ -94,7 +94,7 @@ export const PROJECTS = [
     description:
       "On-demand food delivery with live map tracking, restaurant listings, cart management, and real-time courier updates.",
     tags: ["Flutter", "Google Maps", "Firebase", "Provider"],
-    image: "/projects/food.jpg",
+    image: "/image/FoodDeliveryApp.png",
     imageAlt: "Food Delivery App screenshot",
     github: "#",
     demo: "#",
@@ -105,7 +105,7 @@ export const PROJECTS = [
     description:
       "Real-time messaging with end-to-end encryption, media sharing, group chats, and read receipts powered by Firestore.",
     tags: ["Flutter", "Firestore", "GetX", "WebSocket"],
-    image: "/projects/chat.jpg",
+    image: "/image/ChatApplicationApp.png",
     imageAlt: "Chat Application screenshot",
     github: "#",
     demo: "#",
@@ -116,7 +116,7 @@ export const PROJECTS = [
     description:
       "Comprehensive workout logging, custom exercise plans, progress analytics, and health metric visualization.",
     tags: ["Flutter", "Hive", "Riverpod", "Charts"],
-    image: "/projects/fitness.jpg",
+    image: "/image/FitnessTrackerApp.png",
     imageAlt: "Fitness Tracker screenshot",
     github: "#",
     demo: "#",
@@ -127,7 +127,7 @@ export const PROJECTS = [
     description:
       "Clean Kanban-style productivity app with drag-and-drop, deadlines, priority tags, and team collaboration features.",
     tags: ["Flutter", "SQLite", "Bloc", "Drag&Drop"],
-    image: "/projects/tasks.jpg",
+    image: "/image/TaskManagerApp.png",
     imageAlt: "Task Manager screenshot",
     github: "#",
     demo: "#",

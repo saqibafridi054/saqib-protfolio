@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/app/lib/data";
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -64,23 +65,56 @@ export default function Navbar() {
           aria-label="Main navigation"
         >
           {/* Logo */}
-          <a
-            href="#home"
-            onClick={(e) => { e.preventDefault(); go("#home"); }}
-            style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}
-          >
-            <div style={{
-              width: 36, height: 36, borderRadius: 10,
-              background: "#02569b",
-              display: "flex", alignItems: "center", justifyContent: "center",
-            }}>
-              <span style={{ color: "#fff", fontWeight: 700, fontSize: 13, fontFamily: "monospace" }}>SA</span>
-            </div>
-            <span style={{ color: "#e5e2e3", fontWeight: 700, fontSize: 16, letterSpacing: "-0.01em" }}>
-              Saqib Afridi
-            </span>
-          </a>
+<a
+  href="#home"
+  onClick={(e) => {
+    e.preventDefault();
+    go("#home");
+  }}
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: 10,
+    textDecoration: "none",
+  }}
+>
+  <div
+    style={{
+      width: 36,
+      height: 36,
+      borderRadius: "50%", // Circular image
+      overflow: "hidden",
+      border: "2px solid #02569b",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      background: "#fff",
+    }}
+  >
+    <Image
+      src="/image/saqib.jpeg" // public/profile.png
+      alt="Saqib Afridi"
+      width={36}
+      height={36}
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+      }}
+    />
+  </div>
 
+  <span
+    style={{
+      color: "#e5e2e3",
+      fontWeight: 700,
+      fontSize: 16,
+      letterSpacing: "-0.01em",
+    }}
+  >
+    Saqib Afridi
+  </span>
+</a>
           {/* Desktop links */}
           <div style={{ display: "flex", alignItems: "center", gap: 32 }} className="desktop-nav">
             {NAV_LINKS.map((link) => {
